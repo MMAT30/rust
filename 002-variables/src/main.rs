@@ -29,9 +29,23 @@ fn main() {
     const MAX_POINTS: u32 = 100_000;
     println!("The value of MAX_POINTS is: {MAX_POINTS}");
 
+    // creating a type alias
+    type Kilometers = i32;
+    let kilometers: Kilometers = 5;
+    println!("The value of type Kilometers is: {kilometers}");
+
     // creating a immutable variable
     let x = 5;
     println!("The value of x is: {x}");
+
+    // casting a variable
+    let x = x as f64;
+    println!("The value of x is: {x}");
+
+
+
+
+    
 
     // creating a mutable variable
     let mut y = 10;
@@ -52,15 +66,19 @@ fn main() {
 
     // creating a tuple
     let tup: (i32, f64, u8) = (500, 6.4, 1);
-    println!("The value of tup is: {tup}");
+    println!("The value of tup is: {:?}", tup);
 
     // creating a array
     let arr = [1, 2, 3, 4, 5];
-    println!("The value of arr is: {arr}");
+    println!("The value of arr is: {:?}", arr);
 
     // creating a sized array
     let arr: [i32; 5] = [1, 2, 3, 4, 5];
-    println!("The value of arr is: {arr}");
+    println!("The value of arr is: {:?}", arr);
+
+    // create a slice
+    let slice = &arr[1..3];
+    println!("The value of slice is: {:?}", slice);
 
 
 
