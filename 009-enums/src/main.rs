@@ -13,6 +13,37 @@ enum ColorType {
     RGB(i32, i32, i32)
 }
 
+enum Data {
+    Map{i: i32, f: f32, s: String},
+    Int(i32),
+    Float(f32),
+    Text(String),
+}
+
+
+impl Data {
+    fn print(&self) {
+        match self {
+            Data::Int(i) => {
+                println!("enum type Int(i32)");
+                println!("i = {}", i);
+            },
+            Data::Float(f) => {
+                println!("enum type Float(f32)");
+                println!("f = {}", f);
+            },
+            Data::Text(s) => {
+                println!("enum type Text(String)");
+                println!("s = {}", s);
+            },
+            Data::Map{i, f, s} => {
+                println!("enum type Map{{i: i32, f: f32, s: String}}");
+                println!("i = {}, f = {}, s = {}", i, f, s);
+            },
+        }
+    }
+}
+
 
 
 impl ColorType {
