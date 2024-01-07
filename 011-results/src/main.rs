@@ -1,5 +1,6 @@
 use std::io;
-use std::io::Read;
+// use std::io::Read;
+use std::fs::read_to_string;
 use std::fs::File;
 use std::io::ErrorKind;
 use std::error::Error;
