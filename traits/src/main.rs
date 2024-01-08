@@ -54,6 +54,7 @@ fn main() {
 
 
 #[derive(Debug)]
+#[allow(dead_code)]
 struct Like {
     username: String,
     content: String,

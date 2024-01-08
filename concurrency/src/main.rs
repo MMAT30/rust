@@ -1,6 +1,7 @@
 use std::thread::{spawn, sleep};
 use std::time::Duration;
 use std::sync::mpsc::channel;
+use std::sync::Mutex;
 
 fn main() {
     
@@ -8,7 +9,11 @@ fn main() {
 
     // creating a channel
     let (tx, rx) = channel();
+
+    // cloning the channel
     let tx_clone = tx.clone();
+
+    // 
 
 
     // creating a thread that sends data to the channel

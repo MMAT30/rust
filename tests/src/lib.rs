@@ -17,6 +17,7 @@ pub fn should_panic() {
 }
 
 // private function
+#[allow(dead_code)]
 fn private_function() -> bool {
     true
 }

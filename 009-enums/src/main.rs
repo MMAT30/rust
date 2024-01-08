@@ -13,6 +13,7 @@ enum ColorType {
     RGB(i32, i32, i32)
 }
 
+#[allow(dead_code)]
 enum Data {
     Map{i: i32, f: f32, s: String},
     Int(i32),
@@ -22,6 +23,7 @@ enum Data {
 
 
 impl Data {
+    #[allow(dead_code)]
     fn print(&self) {
         match self {
             Data::Int(i) => {
