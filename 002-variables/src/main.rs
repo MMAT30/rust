@@ -38,7 +38,7 @@ fn main() {
     let x = 5;
     println!("The value of x is: {x}");
 
-    // casting a variable
+    // casting a immutable variable
     let x = x as f64;
     println!("The value of x is: {x}");
 
@@ -57,11 +57,19 @@ fn main() {
 
 
     // shadowing - allows us to change the type of the variable without being mutable
+    // summary: its destroys the previous value and creates a new one but with the same name
+    // and  it does not guarante reuse the same memory address
+
+    // created the z at some memory address
     let z = "Hello";
     println!("The value of z is: {z}");
+    println!("The addrs of z is: {:p}", &z);
 
+
+    println!("z is about to be shadowed");
     let z = z.len();
     println!("The value of z is: {z}");
+    println!("The addrs of z is: {:p}", &z);
 
 
     // creating a tuple

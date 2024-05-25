@@ -11,6 +11,9 @@ fn main() {
     };        
     println!("x = {x}"); 
 
+
+
+    
     // closure
     let x = |x: i32, y: i32| -> i32 {x + y};
     println!("impl Fn(i32, i32) -> i32 = {}", x(5, 5));
